@@ -1,0 +1,50 @@
+{
+  "name": "Polling App Rules",
+  "description": "Rules for consistent development in the Polling App using Windsurf",
+  "rules": [
+    {
+      "id": "folder-structure",
+      "description": "Maintain consistent folder structure.",
+      "examples": [
+        "/app/polls/ → UI components & pages for polls",
+        "/app/api/ → API routes (Next.js App Router)",
+        "/lib/ → utility functions",
+        "/components/ → reusable UI components",
+        "/hooks/ → custom React hooks"
+      ]
+    },
+    {
+      "id": "forms",
+      "description": "Use react-hook-form + shadcn/ui for all forms. Validation must use zod schemas.",
+      "examples": [
+        "Wrap forms in <Form> and <Card> from shadcn/ui",
+        "Use Controller with react-hook-form for inputs"
+      ]
+    },
+    {
+      "id": "supabase",
+      "description": "Use Supabase for authentication and database queries.",
+      "examples": [
+        "Import Supabase client from /lib/supabaseClient.ts",
+        "Use supabase.auth.signInWithOtp for email login",
+        "Database queries must use supabase.from('table') syntax"
+      ]
+    },
+    {
+      "id": "ui-consistency",
+      "description": "Maintain consistent UI/UX with Tailwind + shadcn/ui.",
+      "examples": [
+        "Use <Card>, <Button>, <Input>, <FormField> consistently",
+        "Poll pages should be grid-based with rounded corners and padding"
+      ]
+    },
+    {
+      "id": "testing",
+      "description": "Add tests for new features using Playwright.",
+      "examples": [
+        "E2E tests live in tests/e2e/",
+        "Each new poll feature must include at least one test"
+      ]
+    }
+  ]
+}
